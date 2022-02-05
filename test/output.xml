@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20220205 22:58:24.481" rpa="false">
+<suite id="s1" name="Tc" source="E:\tmp\old\rf2\test\tc">
+<suite id="s1-s1" name="添加课程" source="E:\tmp\old\rf2\test\tc\添加课程">
+<suite id="s1-s1-s1" name="添加课程" source="E:\tmp\old\rf2\test\tc\添加课程\添加课程.robot">
+<kw name="Setup Webtest" library="rc" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:8066</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20220205 22:58:24.702" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8066'.</msg>
+<status status="PASS" starttime="20220205 22:58:24.702" endtime="20220205 22:58:26.333"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:26.333" endtime="20220205 22:58:26.334"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:24.701" endtime="20220205 22:58:26.334"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="添加课程1">
+<kw name="deleteAllCourse" library="rc" type="setup">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:26.336" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:26.336" endtime="20220205 22:58:26.412"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:26.413" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:26.412" endtime="20220205 22:58:26.483"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:26.484" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:26.483" endtime="20220205 22:58:26.551"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:26.552" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:26.552" endtime="20220205 22:58:26.585"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:26.335" endtime="20220205 22:58:26.585"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:26.585" endtime="20220205 22:58:26.586"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:27.622" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:26.587" endtime="20220205 22:58:27.622"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:27.626" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:27.622" endtime="20220205 22:58:27.626"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:26.587" endtime="20220205 22:58:27.626"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:26.586" endtime="20220205 22:58:27.626"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:27.627" endtime="20220205 22:58:27.627"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:26.335" endtime="20220205 22:58:27.627"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:27.628" endtime="20220205 22:58:28.636"></status>
+</kw>
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.637" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:28.637" endtime="20220205 22:58:28.660"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.660" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:28.660" endtime="20220205 22:58:28.723"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.724" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:28.723" endtime="20220205 22:58:28.789"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.790" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:28.790" endtime="20220205 22:58:28.819"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:28.637" endtime="20220205 22:58:28.819"></status>
+</kw>
+<kw name="add course" library="rc">
+<arguments>
+<arg>初中语文</arg>
+<arg>初中语文课程</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:28.820" level="INFO">Clicking element 'css=*[href="#/"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:28.819" endtime="20220205 22:58:29.105"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.109" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:29.105" endtime="20220205 22:58:30.109"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.109" level="INFO">Clicking element 'css=*[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:30.109" endtime="20220205 22:58:30.146"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.name"]</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.146" level="INFO">Typing text '初中语文' into text field 'css=*[ng-model="addData.name"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:30.146" endtime="20220205 22:58:30.212"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.212" level="INFO">Typing text '初中语文课程' into text field 'css=*[ng-model="addData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:30.212" endtime="20220205 22:58:30.277"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.278" level="INFO">Typing text '1' into text field 'css=*[ng-model="addData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:30.277" endtime="20220205 22:58:30.334"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:30.334" level="INFO">Clicking element 'css=*[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:30.334" endtime="20220205 22:58:30.365"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:28.819" endtime="20220205 22:58:30.365"></status>
+</kw>
+<kw name="get course list" library="rc">
+<assign>
+<var>${lessons}</var>
+</assign>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.368" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:30.366" endtime="20220205 22:58:31.368"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>${lessons}</var>
+</assign>
+<msg timestamp="20220205 22:58:31.368" level="INFO">${lessons} = []</msg>
+<status status="PASS" starttime="20220205 22:58:31.368" endtime="20220205 22:58:31.368"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=tr&gt;td:nth-child(2)</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:31.377" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="22bd3f8d-5288-4007-b390-605e0e5e115e")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:58:31.368" endtime="20220205 22:58:31.377"></status>
+</kw>
+<kw name="${ele} IN [ @{eles} ]" type="for">
+<kw name="${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;0387962e367306f0288586aa026949b5&quot;, element=&quot;22bd3f8d-5288-4007-b390-605e0e5e115e&quot;)&gt;" type="foritem">
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${lessons}</arg>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:31.378" endtime="20220205 22:58:31.390"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:31.390" endtime="20220205 22:58:31.396"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.378" endtime="20220205 22:58:31.396"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.377" endtime="20220205 22:58:31.396"></status>
+</kw>
+<msg timestamp="20220205 22:58:31.396" level="INFO">${lessons} = ['初中语文']</msg>
+<status status="PASS" starttime="20220205 22:58:30.365" endtime="20220205 22:58:31.396"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$lessons==["初中语文"]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:31.397" endtime="20220205 22:58:31.397"></status>
+</kw>
+<kw name="deleteAllCourse" library="rc" type="teardown">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.398" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:31.398" endtime="20220205 22:58:31.426"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.427" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:31.426" endtime="20220205 22:58:31.493"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.493" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:31.493" endtime="20220205 22:58:31.558"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.558" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:31.558" endtime="20220205 22:58:31.587"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.398" endtime="20220205 22:58:31.587"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:31.587" endtime="20220205 22:58:31.588"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:31.939" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="a7a090cb-944f-4ab3-8e61-f87b7bc0780d")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:58:31.589" endtime="20220205 22:58:31.939"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:31.939" endtime="20220205 22:58:31.939"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.940" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="a7a090cb-944f-4ab3-8e61-f87b7bc0780d")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:58:31.940" endtime="20220205 22:58:31.974"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:58:31.974" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:58:31.974" endtime="20220205 22:58:32.201"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:33.214" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:32.201" endtime="20220205 22:58:33.214"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.589" endtime="20220205 22:58:33.214"></status>
+</kw>
+<kw name="${one} = 1" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:34.247" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:33.215" endtime="20220205 22:58:34.247"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:34.250" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:34.248" endtime="20220205 22:58:34.250"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:33.215" endtime="20220205 22:58:34.250"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.589" endtime="20220205 22:58:34.250"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:34.251" endtime="20220205 22:58:34.252"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:31.398" endtime="20220205 22:58:34.252"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:26.334" endtime="20220205 22:58:34.253" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="添加课程2">
+<kw name="deleteAllCourse" library="rc" type="setup">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:34.255" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:34.255" endtime="20220205 22:58:34.286"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:34.286" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:34.286" endtime="20220205 22:58:34.350"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:34.351" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:34.350" endtime="20220205 22:58:34.415"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:34.416" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:34.415" endtime="20220205 22:58:34.445"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:34.255" endtime="20220205 22:58:34.445"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:34.445" endtime="20220205 22:58:34.446"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:35.502" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:34.447" endtime="20220205 22:58:35.502"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:35.502" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:35.502" endtime="20220205 22:58:35.502"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:34.446" endtime="20220205 22:58:35.502"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:34.446" endtime="20220205 22:58:35.502"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:35.503" endtime="20220205 22:58:35.504"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:34.255" endtime="20220205 22:58:35.504"></status>
+</kw>
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:35.504" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:35.504" endtime="20220205 22:58:35.535"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:35.535" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:35.535" endtime="20220205 22:58:35.600"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:35.600" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:35.600" endtime="20220205 22:58:35.665"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:35.665" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:35.665" endtime="20220205 22:58:35.694"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:35.504" endtime="20220205 22:58:35.694"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:36.707" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:35.694" endtime="20220205 22:58:36.707"></status>
+</kw>
+<kw name="add course" library="rc">
+<arguments>
+<arg>初中数学</arg>
+<arg>初中数学课程</arg>
+<arg>2</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:36.710" level="INFO">Clicking element 'css=*[href="#/"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:36.709" endtime="20220205 22:58:36.753"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.759" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:36.753" endtime="20220205 22:58:37.759"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.759" level="INFO">Clicking element 'css=*[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:37.759" endtime="20220205 22:58:37.793"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.name"]</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.794" level="INFO">Typing text '初中数学' into text field 'css=*[ng-model="addData.name"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:37.793" endtime="20220205 22:58:37.860"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.860" level="INFO">Typing text '初中数学课程' into text field 'css=*[ng-model="addData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:37.860" endtime="20220205 22:58:37.922"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.922" level="INFO">Typing text '2' into text field 'css=*[ng-model="addData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:37.922" endtime="20220205 22:58:37.982"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:37.982" level="INFO">Clicking element 'css=*[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:37.982" endtime="20220205 22:58:38.012"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:36.708" endtime="20220205 22:58:38.013"></status>
+</kw>
+<kw name="get course list" library="rc">
+<assign>
+<var>${lessons}</var>
+</assign>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.018" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:38.013" endtime="20220205 22:58:39.018"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>${lessons}</var>
+</assign>
+<msg timestamp="20220205 22:58:39.019" level="INFO">${lessons} = []</msg>
+<status status="PASS" starttime="20220205 22:58:39.019" endtime="20220205 22:58:39.019"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=tr&gt;td:nth-child(2)</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:39.038" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="8b3a678f-eca7-4de7-b988-878dfefbf2ec")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:58:39.020" endtime="20220205 22:58:39.038"></status>
+</kw>
+<kw name="${ele} IN [ @{eles} ]" type="for">
+<kw name="${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;0387962e367306f0288586aa026949b5&quot;, element=&quot;8b3a678f-eca7-4de7-b988-878dfefbf2ec&quot;)&gt;" type="foritem">
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${lessons}</arg>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:39.039" endtime="20220205 22:58:39.050"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:39.050" endtime="20220205 22:58:39.056"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.039" endtime="20220205 22:58:39.056"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.039" endtime="20220205 22:58:39.056"></status>
+</kw>
+<msg timestamp="20220205 22:58:39.056" level="INFO">${lessons} = ['初中数学']</msg>
+<status status="PASS" starttime="20220205 22:58:38.013" endtime="20220205 22:58:39.056"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$lessons==["初中数学"]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:39.057" endtime="20220205 22:58:39.057"></status>
+</kw>
+<kw name="deleteAllCourse" library="rc" type="teardown">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.058" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:39.058" endtime="20220205 22:58:39.091"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.092" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:39.092" endtime="20220205 22:58:39.153"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.153" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:39.153" endtime="20220205 22:58:39.216"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.216" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:39.216" endtime="20220205 22:58:39.245"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.058" endtime="20220205 22:58:39.245"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:39.245" endtime="20220205 22:58:39.246"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:39.556" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="a59590a1-77f2-4419-9e21-26f633c0a3c8")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:58:39.247" endtime="20220205 22:58:39.556"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:39.556" endtime="20220205 22:58:39.557"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.557" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="0387962e367306f0288586aa026949b5", element="a59590a1-77f2-4419-9e21-26f633c0a3c8")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:58:39.557" endtime="20220205 22:58:39.584"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:58:39.584" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:58:39.584" endtime="20220205 22:58:39.827"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:40.836" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:39.827" endtime="20220205 22:58:40.836"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.246" endtime="20220205 22:58:40.837"></status>
+</kw>
+<kw name="${one} = 1" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:41.866" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:40.837" endtime="20220205 22:58:41.866"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:41.869" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:41.867" endtime="20220205 22:58:41.869"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:40.837" endtime="20220205 22:58:41.870"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.246" endtime="20220205 22:58:41.870"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:41.870" endtime="20220205 22:58:41.875"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:39.058" endtime="20220205 22:58:41.875"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:34.254" endtime="20220205 22:58:41.876" critical="yes"></status>
+</test>
+<kw name="Teardown Webtest" library="rc" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220205 22:58:41.881" endtime="20220205 22:58:43.984"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:41.881" endtime="20220205 22:58:43.984"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:24.504" endtime="20220205 22:58:43.984"></status>
+</suite>
+<status status="PASS" starttime="20220205 22:58:24.501" endtime="20220205 22:58:43.989"></status>
+</suite>
+<suite id="s1-s2" name="老师管理" source="E:\tmp\old\rf2\test\tc\老师管理">
+<suite id="s1-s2-s1" name="添加老师" source="E:\tmp\old\rf2\test\tc\老师管理\添加老师.robot">
+<kw name="Setup Webtest" library="rc" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:8066</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20220205 22:58:43.997" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8066'.</msg>
+<status status="PASS" starttime="20220205 22:58:43.997" endtime="20220205 22:58:45.580"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:45.581" endtime="20220205 22:58:45.582"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:43.997" endtime="20220205 22:58:45.582"></status>
+</kw>
+<test id="s1-s2-s1-t1" name="添加老师">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>deleteAllCourse</arg>
+<arg>AND</arg>
+<arg>deleteAllTeacher</arg>
+<arg>AND</arg>
+<arg>add course</arg>
+<arg>初中语文</arg>
+<arg>初中语文课程</arg>
+<arg>1</arg>
+<arg>AND</arg>
+<arg>add course</arg>
+<arg>初中数学</arg>
+<arg>初中数学课程</arg>
+<arg>2</arg>
+</arguments>
+<kw name="deleteAllCourse" library="rc">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:45.584" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:45.584" endtime="20220205 22:58:45.680"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:45.681" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:45.681" endtime="20220205 22:58:45.751"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:45.752" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:45.752" endtime="20220205 22:58:45.818"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:45.819" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:45.819" endtime="20220205 22:58:45.853"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.584" endtime="20220205 22:58:45.853"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:45.853" endtime="20220205 22:58:45.854"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:46.873" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:45.855" endtime="20220205 22:58:46.873"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:46.876" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:46.874" endtime="20220205 22:58:46.876"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.854" endtime="20220205 22:58:46.877"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.854" endtime="20220205 22:58:46.877"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:46.877" endtime="20220205 22:58:46.882"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.583" endtime="20220205 22:58:46.882"></status>
+</kw>
+<kw name="deleteAllTeacher" library="rc">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>&amp;{adminuser}[name]</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:46.885" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:46.885" endtime="20220205 22:58:46.925"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:46.926" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:46.925" endtime="20220205 22:58:46.987"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:46.988" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:46.987" endtime="20220205 22:58:47.050"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:47.050" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:47.050" endtime="20220205 22:58:47.079"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:46.884" endtime="20220205 22:58:47.079"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/teacher"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:47.079" level="INFO">Clicking element 'css=*[href="#/teacher"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:47.079" endtime="20220205 22:58:47.418"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:47.419" endtime="20220205 22:58:47.420"></status>
+</kw>
+<kw name="${one} IN [ RANGE | 9999 ]" type="for">
+<kw name="${one} = RANGE" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:48.481" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:58:47.420" endtime="20220205 22:58:48.481"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:48.481" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:58:48.481" endtime="20220205 22:58:48.482"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:47.420" endtime="20220205 22:58:48.482"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:47.420" endtime="20220205 22:58:48.482"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:48.482" endtime="20220205 22:58:48.483"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:46.883" endtime="20220205 22:58:48.483"></status>
+</kw>
+<kw name="add course" library="rc">
+<arguments>
+<arg>初中语文</arg>
+<arg>初中语文课程</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:48.483" level="INFO">Clicking element 'css=*[href="#/"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:48.483" endtime="20220205 22:58:48.514"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.523" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:48.514" endtime="20220205 22:58:49.523"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.523" level="INFO">Clicking element 'css=*[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.523" endtime="20220205 22:58:49.560"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.name"]</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.560" level="INFO">Typing text '初中语文' into text field 'css=*[ng-model="addData.name"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.560" endtime="20220205 22:58:49.625"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.625" level="INFO">Typing text '初中语文课程' into text field 'css=*[ng-model="addData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.625" endtime="20220205 22:58:49.683"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.684" level="INFO">Typing text '1' into text field 'css=*[ng-model="addData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.683" endtime="20220205 22:58:49.745"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.745" level="INFO">Clicking element 'css=*[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.745" endtime="20220205 22:58:49.778"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:48.483" endtime="20220205 22:58:49.778"></status>
+</kw>
+<kw name="add course" library="rc">
+<arguments>
+<arg>初中数学</arg>
+<arg>初中数学课程</arg>
+<arg>2</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:49.779" level="INFO">Clicking element 'css=*[href="#/"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:49.778" endtime="20220205 22:58:49.799"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.805" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:49.800" endtime="20220205 22:58:50.805"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.805" level="INFO">Clicking element 'css=*[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.805" endtime="20220205 22:58:50.826"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.name"]</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.826" level="INFO">Typing text '初中数学' into text field 'css=*[ng-model="addData.name"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.826" endtime="20220205 22:58:50.881"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.881" level="INFO">Typing text '初中数学课程' into text field 'css=*[ng-model="addData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.881" endtime="20220205 22:58:50.930"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.930" level="INFO">Typing text '2' into text field 'css=*[ng-model="addData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.930" endtime="20220205 22:58:50.971"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.971" level="INFO">Clicking element 'css=*[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.971" endtime="20220205 22:58:50.993"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:49.778" endtime="20220205 22:58:50.993"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.583" endtime="20220205 22:58:50.993"></status>
+</kw>
+<kw name="Add Teacher" library="rc">
+<arguments>
+<arg>庄子</arg>
+<arg>zhuangzhi</arg>
+<arg>庄子老师</arg>
+<arg>1</arg>
+<arg>初中语文</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/teacher"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:50.994" level="INFO">Clicking element 'css=*[href="#/teacher"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:50.994" endtime="20220205 22:58:51.014"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.019" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:51.015" endtime="20220205 22:58:52.019"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.019" level="INFO">Clicking element 'css=button[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.019" endtime="20220205 22:58:52.057"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.realname"]</arg>
+<arg>${realname}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.058" level="INFO">Typing text '庄子' into text field 'css=*[ng-model="addEditData.realname"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.058" endtime="20220205 22:58:52.125"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.username"]</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.126" level="INFO">Typing text 'zhuangzhi' into text field 'css=*[ng-model="addEditData.username"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.126" endtime="20220205 22:58:52.199"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.199" level="INFO">Typing text '庄子老师' into text field 'css=*[ng-model="addEditData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.199" endtime="20220205 22:58:52.253"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.254" level="INFO">Typing text '1' into text field 'css=*[ng-model="addEditData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.253" endtime="20220205 22:58:52.312"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>css=*[ng-model="$parent.courseSelected"]</arg>
+<arg>${course}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.312" level="INFO">Selecting options from selection list 'css=*[ng-model="$parent.courseSelected"]' by label 初中语文.</msg>
+<status status="PASS" starttime="20220205 22:58:52.312" endtime="20220205 22:58:52.372"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="addEditData.addTeachCourse()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.373" level="INFO">Clicking element 'css=button[ng-click="addEditData.addTeachCourse()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.372" endtime="20220205 22:58:52.405"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:52.405" level="INFO">Clicking element 'css=button[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:52.405" endtime="20220205 22:58:52.437"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20220205 22:58:54.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220205 22:58:52.437" endtime="20220205 22:58:54.444"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:50.993" endtime="20220205 22:58:54.445"></status>
+</kw>
+<kw name="Add Teacher" library="rc">
+<arguments>
+<arg>孔子</arg>
+<arg>kongzi</arg>
+<arg>孔子老师</arg>
+<arg>2</arg>
+<arg>初中数学</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/teacher"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:54.448" level="INFO">Clicking element 'css=*[href="#/teacher"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:54.447" endtime="20220205 22:58:54.478"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.483" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:54.478" endtime="20220205 22:58:55.484"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="showAddOne=true"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.485" level="INFO">Clicking element 'css=button[ng-click="showAddOne=true"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.484" endtime="20220205 22:58:55.514"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.realname"]</arg>
+<arg>${realname}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.514" level="INFO">Typing text '孔子' into text field 'css=*[ng-model="addEditData.realname"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.514" endtime="20220205 22:58:55.563"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.username"]</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.563" level="INFO">Typing text 'kongzi' into text field 'css=*[ng-model="addEditData.username"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.563" endtime="20220205 22:58:55.621"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.desc"]</arg>
+<arg>${desc}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.622" level="INFO">Typing text '孔子老师' into text field 'css=*[ng-model="addEditData.desc"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.621" endtime="20220205 22:58:55.666"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[ng-model="addEditData.display_idx"]</arg>
+<arg>${idx}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.666" level="INFO">Typing text '2' into text field 'css=*[ng-model="addEditData.display_idx"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.666" endtime="20220205 22:58:55.711"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>css=*[ng-model="$parent.courseSelected"]</arg>
+<arg>${course}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.711" level="INFO">Selecting options from selection list 'css=*[ng-model="$parent.courseSelected"]' by label 初中数学.</msg>
+<status status="PASS" starttime="20220205 22:58:55.711" endtime="20220205 22:58:55.756"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="addEditData.addTeachCourse()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.756" level="INFO">Clicking element 'css=button[ng-click="addEditData.addTeachCourse()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.756" endtime="20220205 22:58:55.777"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click="addOne()"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:55.777" level="INFO">Clicking element 'css=button[ng-click="addOne()"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:55.777" endtime="20220205 22:58:55.798"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20220205 22:58:57.801" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220205 22:58:55.798" endtime="20220205 22:58:57.801"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:54.446" endtime="20220205 22:58:57.802"></status>
+</kw>
+<kw name="get teacher list" library="rc">
+<assign>
+<var>${teachers}</var>
+</assign>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/teacher"]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:57.805" level="INFO">Clicking element 'css=*[href="#/teacher"]'.</msg>
+<status status="PASS" starttime="20220205 22:58:57.804" endtime="20220205 22:58:57.829"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:58:58.839" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:57.829" endtime="20220205 22:58:58.839"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>${teachers}</var>
+</assign>
+<msg timestamp="20220205 22:58:58.840" level="INFO">${teachers} = []</msg>
+<status status="PASS" starttime="20220205 22:58:58.840" endtime="20220205 22:58:58.841"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=tr&gt;td:nth-child(2)</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:58.852" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="2f770ce3-17d4-41ed-8c9e-1e838b6daf55")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220205 22:58:58.841" endtime="20220205 22:58:58.852"></status>
+</kw>
+<kw name="${ele} IN [ @{eles} ]" type="for">
+<kw name="${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8c441bf87421798a2870555a9357cbb7&quot;, element=&quot;2f770ce3-17d4-41ed-8c9e-1e838b6daf55&quot;)&gt;" type="foritem">
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${teachers}</arg>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:58.852" endtime="20220205 22:58:58.863"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.852" endtime="20220205 22:58:58.863"></status>
+</kw>
+<kw name="${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8c441bf87421798a2870555a9357cbb7&quot;, element=&quot;f7b1b725-b3b3-4d41-8a5e-1d796bdf36d9&quot;)&gt;" type="foritem">
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${teachers}</arg>
+<arg>${ele.text}</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:58.863" endtime="20220205 22:58:58.873"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.863" endtime="20220205 22:58:58.873"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.852" endtime="20220205 22:58:58.873"></status>
+</kw>
+<msg timestamp="20220205 22:58:58.873" level="INFO">${teachers} = ['庄子', '孔子']</msg>
+<status status="PASS" starttime="20220205 22:58:57.803" endtime="20220205 22:58:58.873"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$teachers==["庄子","孔子"]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:58.874" endtime="20220205 22:58:58.874"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>deleteAllCourse</arg>
+<arg>AND</arg>
+<arg>deleteAllTeacher</arg>
+</arguments>
+<kw name="deleteAllCourse" library="rc">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:58:58.875" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:58:58.875" endtime="20220205 22:58:58.909"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:58.909" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:58:58.909" endtime="20220205 22:58:58.973"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:58.973" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:58:58.973" endtime="20220205 22:58:59.040"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:58:59.040" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:58:59.040" endtime="20220205 22:58:59.077"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.875" endtime="20220205 22:58:59.077"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:59.077" endtime="20220205 22:58:59.078"></status>
+</kw>
+<kw name="${one} IN RANGE [ 9999 ]" type="for">
+<kw name="${one} = 0" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:58:59.405" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="f1621e6c-d4f5-4c2a-8c78-db0b2da6b6d0")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220205 22:58:59.079" endtime="20220205 22:58:59.405"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:58:59.405" endtime="20220205 22:58:59.406"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:58:59.406" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="f1621e6c-d4f5-4c2a-8c78-db0b2da6b6d0")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:58:59.406" endtime="20220205 22:58:59.437"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:58:59.438" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:58:59.437" endtime="20220205 22:58:59.666"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:59:00.678" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:58:59.666" endtime="20220205 22:59:00.678"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:59.078" endtime="20220205 22:59:00.678"></status>
+</kw>
+<kw name="${one} = 1" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:59:00.693" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="139b374f-03f1-4b73-92ae-a8d56ea26abe")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:59:00.679" endtime="20220205 22:59:00.693"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:00.693" endtime="20220205 22:59:00.693"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:00.694" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="139b374f-03f1-4b73-92ae-a8d56ea26abe")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:59:00.693" endtime="20220205 22:59:00.719"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:59:00.719" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:59:00.719" endtime="20220205 22:59:01.000"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:59:02.013" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:59:01.000" endtime="20220205 22:59:02.013"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:00.679" endtime="20220205 22:59:02.013"></status>
+</kw>
+<kw name="${one} = 2" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:59:03.034" level="INFO">${eles} = []</msg>
+<status status="PASS" starttime="20220205 22:59:02.014" endtime="20220205 22:59:03.034"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.037" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220205 22:59:03.035" endtime="20220205 22:59:03.037"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:02.014" endtime="20220205 22:59:03.038"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:59.078" endtime="20220205 22:59:03.038"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:03.039" endtime="20220205 22:59:03.044"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.875" endtime="20220205 22:59:03.044"></status>
+</kw>
+<kw name="deleteAllTeacher" library="rc">
+<kw name="loginwebsite" library="rc">
+<arguments>
+<arg>&amp;{adminuser}[name]</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${mgrlgoinurl}</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.047" level="INFO">Opening url 'http://localhost:8066/mgr/login/login.html'</msg>
+<status status="PASS" starttime="20220205 22:59:03.046" endtime="20220205 22:59:03.078"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>&amp;{adminuser}[name]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.078" level="INFO">Typing text 'auto' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.078" endtime="20220205 22:59:03.143"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>&amp;{adminuser}[pw]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.143" level="INFO">Typing text 'sdfsdfsdf' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.143" endtime="20220205 22:59:03.208"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>tag=button</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.208" level="INFO">Clicking element 'tag=button'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.208" endtime="20220205 22:59:03.242"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:03.045" endtime="20220205 22:59:03.242"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=*[href="#/teacher"]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.243" level="INFO">Clicking element 'css=*[href="#/teacher"]'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.243" endtime="20220205 22:59:03.551"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:03.552" endtime="20220205 22:59:03.553"></status>
+</kw>
+<kw name="${one} IN [ RANGE | 9999 ]" type="for">
+<kw name="${one} = RANGE" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:59:03.618" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="a96577f7-9cb4-48d2-9085-6da42a2c762a")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220205 22:59:03.553" endtime="20220205 22:59:03.618"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:03.618" endtime="20220205 22:59:03.619"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.619" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="a96577f7-9cb4-48d2-9085-6da42a2c762a")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.619" endtime="20220205 22:59:03.652"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:59:03.652" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:59:03.652" endtime="20220205 22:59:03.893"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:59:04.902" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:59:03.893" endtime="20220205 22:59:04.902"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:03.553" endtime="20220205 22:59:04.902"></status>
+</kw>
+<kw name="${one} = 9999" type="foritem">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css=button[ng-click='delOne(one)']</arg>
+</arguments>
+<assign>
+<var>${eles}</var>
+</assign>
+<msg timestamp="20220205 22:59:04.917" level="INFO">${eles} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="9bfcd305-da5c-4e68-9a6b-e0c8e36901d0")&gt;]</msg>
+<status status="PASS" starttime="20220205 22:59:04.903" endtime="20220205 22:59:04.917"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>$eles==[]</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:04.917" endtime="20220205 22:59:04.918"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>@{eles}[0]</arg>
+</arguments>
+<msg timestamp="20220205 22:59:04.918" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8c441bf87421798a2870555a9357cbb7", element="9bfcd305-da5c-4e68-9a6b-e0c8e36901d0")&gt;'.</msg>
+<status status="PASS" starttime="20220205 22:59:04.918" endtime="20220205 22:59:04.943"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button.btn-primary</arg>
+</arguments>
+<msg timestamp="20220205 22:59:04.943" level="INFO">Clicking element 'css=button.btn-primary'.</msg>
+<status status="PASS" starttime="20220205 22:59:04.943" endtime="20220205 22:59:05.209"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20220205 22:59:06.211" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220205 22:59:05.210" endtime="20220205 22:59:06.211"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:04.903" endtime="20220205 22:59:06.211"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:03.553" endtime="20220205 22:59:06.211"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" starttime="20220205 22:59:06.212" endtime="20220205 22:59:06.217"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:03.044" endtime="20220205 22:59:06.217"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:58.874" endtime="20220205 22:59:06.217"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:45.582" endtime="20220205 22:59:06.219" critical="yes"></status>
+</test>
+<kw name="Teardown Webtest" library="rc" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220205 22:59:06.224" endtime="20220205 22:59:08.336"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:59:06.223" endtime="20220205 22:59:08.337"></status>
+</kw>
+<status status="PASS" starttime="20220205 22:58:43.993" endtime="20220205 22:59:08.337"></status>
+</suite>
+<status status="PASS" starttime="20220205 22:58:43.991" endtime="20220205 22:59:08.343"></status>
+</suite>
+<status status="PASS" starttime="20220205 22:58:24.482" endtime="20220205 22:59:08.344"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Tc">Tc</stat>
+<stat pass="2" fail="0" id="s1-s1" name="添加课程">Tc.添加课程</stat>
+<stat pass="2" fail="0" id="s1-s1-s1" name="添加课程">Tc.添加课程.添加课程</stat>
+<stat pass="1" fail="0" id="s1-s2" name="老师管理">Tc.老师管理</stat>
+<stat pass="1" fail="0" id="s1-s2-s1" name="添加老师">Tc.老师管理.添加老师</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
